@@ -3,12 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de Hamburgueseria</title>
-    <script src="java.js" defer></script>
+    <title>Simulador de compras</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Simulador de Hamburgueseria</h1>
-    <p>Haz clic en el boton para iniciar el pedido:</p>
-    <button onclick="iniciarPedido()">Iniciar Pedido</button>
+
+    <h1>Carrito de Compras</h1>
+
+    <form id="formularioProducto">
+        <label for="nombreProducto">Buscar producto:</label>
+        <input type="text" id="nombreProducto" placeholder="Escribe el nombre del producto" required>
+
+        <div id="listaProductos">
+            <!-- Aca apareceran las sugerencias completas -->
+        </div>
+
+        <button type="submit" id="miBoton">Agregar al Carrito</button>
+    </form>
+
+    <div id="mensaje"></div>
+
+    <h2>Productos en el Carrito:</h2>
+    <ul id="carrito"></ul>
+
+    <button id="finalizarCompra">Finalizar Compra</button>
+
+    <script src="js/app.js"></script>
 </body>
 </html>
